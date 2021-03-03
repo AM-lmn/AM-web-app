@@ -1,0 +1,119 @@
+body{
+    font-family: ubuntu;
+}
+
+.logLI {
+    padding: 20px;
+    color: blue;
+}
+
+.plusMinus { /*it may seem like this styling element is useless since i cant find it anywhere in index.html, but i fear deleting this will have unintended consequences, so it shall stay here*/
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #1AB090;
+    cursor:  pointer;
+    text-align: right;
+}
+
+.deleteX {
+    margin-right: 50px;
+    font-size: 14px;
+    color: #025593;
+    cursor:  pointer;
+    position: absolute;
+    right: 25px;
+}
+
+.update {
+    width: 100px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #025593;
+    cursor:  pointer;
+}
+
+.right {
+    padding-right: 10px;
+    font-size: 20px;
+    color: rgba(26, 25, 25, 0.879);  
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 10px;
+    background: #ffffff00;
+    font-size: 14px;
+    color: rgba(26, 25, 25, 0.879);  
+    border-bottom: 2px solid #000000;
+    height: 46px;
+}
+
+.ld{
+    width: 100%;
+}
+
+li:nth-child(even){    
+    background: #f2f2f2;
+}
+
+li span:nth-child(2){
+    font-size: 14px;
+    margin-top: 6px;
+    color: blue;  
+}
+
+/*code obtained from https://stackoverflow.com/questions/114543/how-to-horizontally-center-an-element */
+/*obtained for the purpose of centering a div*/
+#inner {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .collapsible {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    /* everything below this comment in this .collapsible element is me attempting to properly center these buttons */
+
+    /*2/28/2021 update: it seems to be normal when loading the page but upon clicking the button, it goes totally haywire and gets off-centered.
+    The text does not display this same effect. I do not know why this is happening*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /*yes I know the dimensions are hard-coded. will potentially investigate a way to change this similar to how deviceWidth and such worked in React Native*/
+    width: 300px;    
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #ffffff00; /*transparent*/
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 300px;
+  }
+  
